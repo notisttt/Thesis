@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {[SerializeField] CharacterController CC;
+    Animator m_Animator;
     public Transform cam;
     public float Speed;
     private float Gravity = -9.6f;
     Vector3 Velocity;
     public float turnTime = 0.01f; 
     private float turnSpeed;
+
+    void Start(){
+        m_Animator = GetComponent<Animator> ();
+
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -25,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
            Vector3 Moving = new Vector3(horiz, 0f, vert).normalized;
            
+           bool hasHorizontalInput = !Mathf.Approximately (horiz, 0f);
+            bool hasVerticalInput = !Mathf.Approximately (vert, 0f);
+            bool isMoving = hasHorizontalInput || hasVerticalInput;
+             m_Animator.SetBool ("IsMoving", isMoving);
+
              if (Moving.magnitude >= 0.1f){
         
         float Turning = Mathf.Atan2(Moving.x, Moving.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
