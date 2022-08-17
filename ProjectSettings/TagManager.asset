@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Skeletons
+  - WildBoars
+  - Enemies
+  - Bear
+  - Giant
   layers:
   - Default
   - TransparentFX
@@ -11,12 +16,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - WhatIsPlayer
+  - WhatIsGround
+  - WhatIsSkeleton
+  - WhatIsWildBoar
+  - WhatIsBear
+  - WhatIsGiant
   - 
   - 
   - 
