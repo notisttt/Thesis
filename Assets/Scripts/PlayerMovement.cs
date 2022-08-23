@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
            bool hasHorizontalInput = !Mathf.Approximately (horiz, 0f);
             bool hasVerticalInput = !Mathf.Approximately (vert, 0f);
             bool isMoving = hasHorizontalInput || hasVerticalInput;
-             m_Animator.SetBool ("IsMoving", isMoving);                                   //walking animation
+             m_Animator.SetBool ("IsMoving", isMoving);                                   //walking animation και κίνηση της κάμερας
 
              if (Moving.magnitude >= 0.1f){
         

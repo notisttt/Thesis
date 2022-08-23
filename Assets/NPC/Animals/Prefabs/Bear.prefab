@@ -186,12 +186,15 @@ MonoBehaviour:
     m_Bits: 64
   health: 15
   damage: 0
+  playerHealth: 0
+  maxHealth: 0
+  regen: 0
   WalkPoint: {x: 0, y: 0, z: 0}
   WalkPointRange: 100
   running: 0
   AttackSpeed: 3.5
   SightRange: 50
-  AttackRange: 4.5
+  AttackRange: 3.5
   InSightRange: 0
   InAttackRange: 0
   Dead: 0
